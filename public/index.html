@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags - Optimized for High-Intent Keywords -->
+    <title>T.R.A.C.E. | AI Assessment to Eliminate Claim Losses & Risk</title>
+    <meta name="description" content="Don't just manage claims—eliminate losses. T.R.A.C.E. uses AI-powered drones to cut assessment times from 32 days to seconds, stop fraud, and deliver undeniable proof. Claim your free AI risk report now.">
+    <meta name="keywords" content="insurtech, automated underwriting, loss adjustment expense, LAE reduction, proptech, ai insurance, drone inspection, roofing software, claims automation, fraud detection, roof assessment, risk management, hail damage ai">
+    <meta name="author" content="T.R.A.C.E.">
+    
+    <!-- Open Graph Meta Tags for Maximum Social Impact -->
+    <meta property="og:title" content="T.R.A.C.E. | The End of Inefficient Claims Processing">
+    <meta property="og:description" content="Stop burning money on outdated assessments. T.R.A.C.E. delivers unrivaled speed, accuracy, and ROI. See why industry leaders are switching.">
+    <meta property="og:image" content="https://placehold.co/1200x630/0a0a14/4299e1?text=T.R.A.C.E.">
+    <meta property="og:url" content="https://your-domain.com">
+    <meta property="og:type" content="website">
+
+    <!-- Embedded SVG Favicon from New Logo -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 68 80'%3E%3Cpath fill='%231D2A3E' d='M67.33 19.33L36.33 1.13c-1.6-.93-3.07-.93-4.67 0L.67 19.33c-1.6.93-2 2.8-1.33 4.4l15.33 38c.67 1.6 2.4 2.93 4.27 2.93h28.27c1.87 0 3.6-1.33 4.27-2.93l15.33-38c.67-1.6.27-3.47-1.34-4.4z'/%3E%3Cpath fill='%2336A1C4' d='M50.48 24.42l-9.1-5.73a3.33 3.33 0 00-3.13-.23L25.32 25.1a1.33 1.33 0 00-.65 1.15l-1.87 11.2a1.33 1.33 0 00.6 1.3l10.9 8.27a6.67 6.67 0 007.8-.2l9.8-7.4a1.33 1.33 0 00.4-1.42l-2.4-11.8a1.33 1.33 0 00-1.42-1.05z'/%3E%3Cpath fill='%23101E2E' d='M47.8 59.87H20.2c-1.87 0-3.6-1.33-4.27-2.93L.67 18.93a1.33 1.33 0 01.93-1.86l.4-.27c1.6-.93 3.07-.93 4.67 0l31 18.2c1.6.93 2 2.8 1.33 4.4l-5.6 14c-.66 1.6-2.4 2.93-4.26 2.93z'/%3E%3Cpath fill='%23FFC043' d='M25.4 51.87a4 4 0 100-8 4 4 0 000 8z'/%3E%3C/svg%3E">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+            extend: {
+                fontFamily: {
+                    sans: ['Inter', 'sans-serif'],
+                    display: ['Orbitron', 'sans-serif'],
+                },
+            }
+        }
+      }
+    </script>
+
+    <style>
+        :root { --brand-blue: #36A1C4; --brand-yellow: #FFC043; }
+        body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        
+        .hero-section { position: relative; overflow: hidden; }
+        #hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            transform: translateX(-50%) translateY(-50%);
+            background-size: cover;
+        }
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(10, 10, 20, 0.88);
+            z-index: -50;
+        }
+
+        .stat-card { transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; border: 1px solid #2d3748; will-change: transform; }
+        .stat-card:hover { transform: translateY(-12px) scale(1.03); box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4); border-color: var(--brand-blue); }
+        .cta-button { transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease; will-change: transform; }
+        .cta-button:hover { transform: scale(1.05); box-shadow: 0 0 25px 0px rgba(54, 161, 196, 0.6); }
+        .fade-in-up { animation: fadeInUp 1s ease-out forwards; opacity: 0; will-change: transform, opacity; }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+        .glow-border { box-shadow: 0 0 25px rgba(54, 161, 196, 0.4); }
+        .delay-1 { animation-delay: 0.15s; } .delay-2 { animation-delay: 0.3s; } .delay-3 { animation-delay: 0.45s; }
+        #dashboard-container { background: #0a0e1a; font-family: 'Inter', sans-serif; color: #e5e5e5; }
+        #dashboard-container .card { background: #141923; border: 1px solid #1a2332; transition: all 0.2s ease-in-out; }
+        #dashboard-container .card:hover { transform: translateY(-2px); border-color: var(--brand-blue); }
+        #dashboard-container .card-title { color: var(--brand-blue); }
+        #dashboard-container .metric-change { color: #00ff88; } #dashboard-container .metric-change.negative { color: #ff4444; }
+        #dashboard-container .alert { background: rgba(255, 190, 0, 0.1); border: 1px solid var(--brand-yellow); }
+        .perf-chart-line { stroke-dasharray: 1000; stroke-dashoffset: 1000; animation: draw-line 2.5s ease-out forwards; }
+        .perf-chart-dot { animation: pulse-dot 2s infinite ease-in-out; transform-origin: center; }
+        .line-2 { animation-delay: 0.5s; } .dot-2 { animation-delay: 0.5s; }
+        @keyframes draw-line { to { stroke-dashoffset: 0; } }
+        @keyframes pulse-dot { 0% { transform: scale(0.8); opacity: 0.7; } 50% { transform: scale(1.2); opacity: 1; } 100% { transform: scale(0.8); opacity: 0.7; } }
+        .client-logo { font-family: 'Orbitron', sans-serif; font-weight: 700; letter-spacing: 1px; font-size: 1.5rem; color: #A0AEC0; }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- Header -->
+    <header class="bg-gray-900/70 backdrop-blur-md sticky top-0 z-50 border-b border-gray-800">
+        <div class="container mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-3">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 68 80" class="w-10 h-10"><path fill="#1D2A3E" d="M67.33 19.33L36.33 1.13c-1.6-.93-3.07-.93-4.67 0L.67 19.33c-1.6.93-2 2.8-1.33 4.4l15.33 38c.67 1.6 2.4 2.93 4.27 2.93h28.27c1.87 0 3.6-1.33 4.27-2.93l15.33-38c.67-1.6.27-3.47-1.34-4.4z"/><path fill="#36A1C4" d="M50.48 24.42l-9.1-5.73a3.33 3.33 0 00-3.13-.23L25.32 25.1a1.33 1.33 0 00-.65 1.15l-1.87 11.2a1.33 1.33 0 00.6 1.3l10.9 8.27a6.67 6.67 0 007.8-.2l9.8-7.4a1.33 1.33 0 00.4-1.42l-2.4-11.8a1.33 1.33 0 00-1.42-1.05z"/><path fill="#101E2E" d="M47.8 59.87H20.2c-1.87 0-3.6-1.33-4.27-2.93L.67 18.93a1.33 1.33 0 01.93-1.86l.4-.27c1.6-.93 3.07-.93 4.67 0l31 18.2c1.6.93 2 2.8 1.33 4.4l-5.6 14c-.66 1.6-2.4 2.93-4.26 2.93z"/><path fill="#FFC043" d="M25.4 51.87a4 4 0 100-8 4 4 0 000 8z"/></svg>
+                <span class="text-2xl font-bold tracking-tighter text-white whitespace-nowrap">T.R.A.C.E.</span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#problem" class="text-gray-400 hover:text-white transition-colors duration-300">The Bleed</a>
+                <a href="#solution" class="text-gray-400 hover:text-white transition-colors duration-300">The Advantage</a>
+                <a href="#contact" class="cta-button bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg shadow-md hover:bg-blue-500">Claim My Advantage</a>
+            </nav>
+            <button class="md:hidden text-gray-300" aria-label="Open menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section text-white">
+            <video id="hero-video" autoplay loop muted playsinline>
+                <source src="https://pub-23f7e1f517734fc09a3807185400d484.r2.dev/Skydio_Sensor_Looking_at_Camera%20.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-overlay"></div>
+            <div class="container relative z-10 mx-auto px-4 sm:px-6 py-24 md:py-40 text-center">
+                <h1 class="text-5xl md:text-6xl font-black tracking-tight leading-tight mb-4 fade-in-up">Stop Reacting to Losses.<br>Start Preventing Them.</h1>
+                <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8 fade-in-up delay-1">Your competition is using outdated methods. T.R.A.C.E. turns months of operational waste into seconds of data-driven profit, shielding you from fraud and giving you an unfair advantage.</p>
+                <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 fade-in-up delay-2">
+                    <a href="#contact" class="cta-button bg-blue-600 text-white font-bold px-8 py-4 rounded-lg shadow-xl text-lg hover:bg-blue-500 w-full sm:w-auto">Reveal My Hidden Risks</a>
+                    <a href="#solution" class="cta-button bg-gray-700/50 border-2 border-gray-600 text-white font-bold px-8 py-4 rounded-lg text-lg hover:bg-gray-700 w-full sm:w-auto">See The Unfair Advantage</a>
+                </div>
+            </div>
+            <div class="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-gray-900 to-transparent z-20"></div>
+        </section>
+
+        <!-- Social Proof Section -->
+        <section class="py-16 bg-gray-900">
+            <div class="container mx-auto px-4 sm:px-6 text-center">
+                <h3 class="text-base font-semibold text-gray-500 uppercase tracking-wider">The Platform of Record for The Industry's Most Efficient Carriers and Contractors</h3>
+                <div class="flex flex-wrap justify-center items-center gap-x-10 md:gap-x-16 gap-y-8 mt-8 opacity-75">
+                     <div class="client-logo">Magnolia AI</div>
+                     <div class="client-logo">Pinnacle Risk</div>
+                     <div class="client-logo">Aegis National</div>
+                     <div class="client-logo">Horizon Exteriors</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Section -->
+        <section id="problem" class="py-20 bg-black">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-white">Stop The <span class="text-red-500">Financial Bleed</span>.</h2>
+                    <p class="mt-4 text-lg text-gray-400 max-w-3xl mx-auto">Outdated processes aren't just slow—they are a direct and escalating threat to your bottom line.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                    <div class="stat-card bg-gray-900 p-6 rounded-xl shadow-lg fade-in-up"><div class="text-red-500 mb-3"><svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v.01"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 16l-4-4m0 0l4-4m-4 4h18"></path></svg></div><h3 class="text-4xl md:text-5xl font-extrabold text-white">$40B Lost</h3><p class="text-gray-400 mt-2 font-semibold">The Industry's Leak...<br>Is it on Your P&L?</p></div>
+                    <div class="stat-card bg-gray-900 p-6 rounded-xl shadow-lg fade-in-up delay-1"><div class="text-yellow-500 mb-3"><svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div><h3 class="text-4xl md:text-5xl font-extrabold text-white">32 Days</h3><p class="text-gray-400 mt-2 font-semibold">Average Claim Cycle.<br>Your Competitors Are Faster.</p></div>
+                    <div class="stat-card bg-gray-900 p-6 rounded-xl shadow-lg fade-in-up delay-2"><div class="text-orange-500 mb-3"><svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div><h3 class="text-4xl md:text-5xl font-extrabold text-white">4x Higher Risk</h3><p class="text-gray-400 mt-2 font-semibold">Of Injury on Site.<br>A Single Fall Costs Millions.</p></div>
+                    <div class="stat-card bg-gray-900 p-6 rounded-xl shadow-lg fade-in-up delay-3"><div class="text-purple-500 mb-3"><svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg></div><h3 class="text-4xl md:text-5xl font-extrabold text-white">Labor Shortage</h3><p class="text-gray-400 mt-2 font-semibold">You Can't Scale<br>With an Overwhelmed Team.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution Section -->
+        <section id="solution" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-4 sm:px-6 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-white">Your Unfair Advantage: <span style="color: var(--brand-blue);">The New Command Center</span></h2>
+                <p class="mt-4 text-lg text-gray-400 max-w-3xl mx-auto">T.R.A.C.E. isn't a tool; it's a new, more profitable way of working. It stops the bleed and gives you an edge your competition can't match.</p>
+                <div id="dashboard-container" class="mt-12 rounded-xl shadow-2xl mx-auto border-2 border-gray-700 glow-border overflow-hidden text-left">
+                     <div class="p-4 sm:p-6">
+                        <div class="alert flex items-center gap-4 p-4 mb-6 rounded-lg"><span class="text-2xl" style="color: var(--brand-yellow);">⚡</span><div><strong class="text-white">Performance Alert:</strong> Drone Unit #7 processed 47 new scans in the last hour - 23% above average.</div></div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-6">
+                            <div class="card p-4 sm:p-6 rounded-lg"><div class="flex justify-between items-center mb-2"><h3 class="card-title font-semibold">Total Scans</h3><span class="text-2xl">📸</span></div><div class="text-4xl font-bold text-white">2,847</div><div class="metric-change mt-2">↑ 12.5%</div></div>
+                            <div class="card p-4 sm:p-6 rounded-lg"><div class="flex justify-between items-center mb-2"><h3 class="card-title font-semibold">Drones Online</h3><span class="text-2xl">🛰️</span></div><div class="text-4xl font-bold text-white">16/16</div><div class="metric-change mt-2">All systems normal</div></div>
+                            <div class="card p-4 sm:p-6 rounded-lg"><div class="flex justify-between items-center mb-2"><h3 class="card-title font-semibold">Avg. Analysis</h3><span class="text-2xl">⏱️</span></div><div class="text-4xl font-bold text-white">1.3s</div><div class="metric-change mt-2">↓ 0.2s improvement</div></div>
+                            <div class="card p-4 sm:p-6 rounded-lg"><div class="flex justify-between items-center mb-2"><h3 class="card-title font-semibold">Identified Risk</h3><span class="text-2xl">💰</span></div><div class="text-4xl font-bold text-white">$1.2M</div><div class="metric-change mt-2 negative">↑ 8% from last month</div></div>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Freemium Lead Capture Section -->
+        <section id="contact" class="py-20 bg-black">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl shadow-2xl p-6 md:p-12 lg:p-16 border border-blue-800/50 glow-border">
+                    <div class="text-center mb-8">
+                        <h2 class="text-4xl md:text-5xl font-bold text-white">Get Actionable Insights. <span style="color: var(--brand-blue);">Free.</span></h2>
+                        <p class="mt-4 text-lg text-gray-400">Stop guessing. Start knowing. Generate your **FREE, AI-powered damage assessment report** right now.</p>
+                        <div class="mt-4 text-center text-yellow-400 bg-yellow-900/50 border border-yellow-700 rounded-lg p-3 inline-block font-semibold">Limited Time: Free AI-Powered Assessments Available This Week Only</div>
+                    </div>
+                    <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+                        <!-- What you get section -->
+                        <div class="lg:w-1/2 w-full text-center lg:text-left">
+                            <h3 class="text-2xl font-bold text-white mb-4">In Your Free Report, You'll Uncover:</h3>
+                            <ul class="space-y-3 text-gray-300">
+                                <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✓</span><span><strong>AI-Powered Anomaly Detection</strong> for one property address of your choice.</span></li>
+                                <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✓</span><span><strong>A Direct ROI Comparison</strong> of AI vs. traditional assessment timelines and costs.</span></li>
+                                <li class="flex items-start"><span class="text-green-400 mr-3 mt-1">✓</span><span><strong>A Quantified Risk Score</strong> based on our proprietary data models.</span></li>
+                            </ul>
+                            <img src="https://magnoliaaiexperts.com/wp-content/uploads/2025/05/trace-badge-report-150x150-1.webp" alt="T.R.A.C.E. Certified AI Report Badge" class="rounded-lg mt-8 shadow-md mx-auto lg:mx-0 border-2 border-gray-700 h-32 w-32 sm:h-40 sm:w-40" onerror="this.style.display='none'">
+                        </div>
+                        <!-- Form section -->
+                        <div class="lg:w-1/2 w-full">
+                            <div class="bg-gray-800 p-6 sm:p-8 rounded-lg border border-gray-700">
+                                <form id="lead-form">
+                                    <div class="space-y-4">
+                                        <div><label for="fullName" class="text-sm font-semibold text-gray-300">Full Name</label><input type="text" id="fullName" name="fullName" class="w-full mt-1 p-3 bg-gray-900 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" required></div>
+                                        <div><label for="workEmail" class="text-sm font-semibold text-gray-300">Work Email</label><input type="email" id="workEmail" name="workEmail" class="w-full mt-1 p-3 bg-gray-900 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" required></div>
+                                        <div><label for="companyName" class="text-sm font-semibold text-gray-300">Company Name</label><input type="text" id="companyName" name="companyName" class="w-full mt-1 p-3 bg-gray-900 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" required></div>
+                                        <div><label for="role" class="text-sm font-semibold text-gray-300">I am a(n)...</label><select id="role" name="role" class="w-full mt-1 p-3 bg-gray-900 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" required><option value="">Select your role</option><option value="Insurance Professional">Insurance Professional</option><option value="Roofing Contractor">Roofing Contractor</option><option value="Other">Other</option></select></div>
+                                    </div>
+                                    <button type="submit" id="submit-button" class="cta-button w-full mt-6 bg-blue-600 text-white font-bold p-4 rounded-lg text-lg shadow-lg hover:bg-blue-500 disabled:bg-gray-500 disabled:cursor-not-allowed">Claim My Free Assessment</button>
+                                    <p class="text-xs text-gray-500 text-center mt-3">No credit card required. Your report will be generated and emailed within minutes.</p>
+                                    <p id="form-status" class="mt-4 text-center text-sm h-5"></p>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Testimonial Section -->
+        <section class="py-20 bg-gray-900">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="text-center mb-12"><h2 class="text-4xl md:text-5xl font-bold text-white">Why Leaders Choose T.R.A.C.E.</h2></div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="bg-gray-800 p-6 md:p-8 rounded-lg border border-gray-700 transform hover:scale-105 transition-transform duration-300">
+                        <p class="text-gray-300 text-lg italic leading-relaxed">"T.R.A.C.E. cut our average claim cycle by over 20 days. The impact on customer satisfaction and LAE was immediate and profound. It's the biggest leap forward for our claims department in a decade."</p>
+                        <div class="flex items-center mt-6">
+                            <img src="https://placehold.co/50x50/36A1C4/ffffff?text=MF" alt="Maria Flores" class="w-12 h-12 rounded-full mr-4 border-2" style="border-color: var(--brand-blue);">
+                            <div><p class="font-bold text-white">Maria Flores</p><p class="text-gray-400">Head of Property Claims, Apex Assurance</p></div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-800 p-6 md:p-8 rounded-lg border border-gray-700 transform hover:scale-105 transition-transform duration-300 lg:delay-150">
+                        <p class="text-gray-300 text-lg italic leading-relaxed">"We're doing five times the number of bids with the same team. I don't have to worry about safety, and my closing rate has jumped 30% because the reports are so convincing. I can't imagine going back."</p>
+                        <div class="flex items-center mt-6">
+                             <img src="https://placehold.co/50x50/36A1C4/ffffff?text=DC" alt="David Chen" class="w-12 h-12 rounded-full mr-4 border-2" style="border-color: var(--brand-blue);">
+                            <div><p class="font-bold text-white">David Chen</p><p class="text-gray-400">CEO, HighPoint Exteriors</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-gray-800">
+        <div class="container mx-auto px-4 sm:px-6 py-12 text-center text-gray-500">
+             <a href="#" class="flex justify-center items-center space-x-3 mb-6">
+                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 68 80" class="w-8 h-8"><path fill="#1D2A3E" d="M67.33 19.33L36.33 1.13c-1.6-.93-3.07-.93-4.67 0L.67 19.33c-1.6.93-2 2.8-1.33 4.4l15.33 38c.67 1.6 2.4 2.93 4.27 2.93h28.27c1.87 0 3.6-1.33 4.27-2.93l15.33-38c.67-1.6.27-3.47-1.34-4.4z"/><path fill="#36A1C4" d="M50.48 24.42l-9.1-5.73a3.33 3.33 0 00-3.13-.23L25.32 25.1a1.33 1.33 0 00-.65 1.15l-1.87 11.2a1.33 1.33 0 00.6 1.3l10.9 8.27a6.67 6.67 0 007.8-.2l9.8-7.4a1.33 1.33 0 00.4-1.42l-2.4-11.8a1.33 1.33 0 00-1.42-1.05z"/><path fill="#101E2E" d="M47.8 59.87H20.2c-1.87 0-3.6-1.33-4.27-2.93L.67 18.93a1.33 1.33 0 01.93-1.86l.4-.27c1.6-.93 3.07-.93 4.67 0l31 18.2c1.6.93 2 2.8 1.33 4.4l-5.6 14c-.66 1.6-2.4 2.93-4.26 2.93z"/><path fill="#FFC043" d="M25.4 51.87a4 4 0 100-8 4 4 0 000 8z"/></svg>
+                <span class="text-2xl font-bold tracking-tighter text-white">T.R.A.C.E.</span>
+            </a>
+            <p class="text-sm">&copy; 2025 T.R.A.C.E. Corporation. All Rights Reserved.</p>
+            <div class="mt-4 text-xs"><a href="#" class="hover:text-white mx-2 transition-colors">Privacy Policy</a><span class="text-gray-600">|</span><a href="#" class="hover:text-white mx-2 transition-colors">Terms of Service</a></div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Form submission handler with Google Apps Script Integration
+        const form = document.getElementById('lead-form');
+        const statusEl = document.getElementById('form-status');
+        const submitButton = document.getElementById('submit-button');
+        
+        // Form is now connected to the Google Apps Script backend
+        const apiUrl = 'https://script.google.com/macros/s/AKfycbyq3iuHzeE-CBsgPgIgRhUH_B3VN-KnNkemg9oJGN2qTLsgEkFuT7u-DM8btYxikQcg/exec';
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            if (apiUrl === 'PASTE_YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
+                statusEl.textContent = 'Error: API URL not configured.';
+                statusEl.style.color = '#ef4444'; // red
+                return;
+            }
+
+            statusEl.textContent = 'Submitting...';
+            statusEl.style.color = '#36A1C4'; // Brand Blue
+            submitButton.disabled = true;
+            
+            const formData = {
+                fullName: form.fullName.value,
+                workEmail: form.workEmail.value,
+                companyName: form.companyName.value,
+                role: form.role.value
+            };
+
+            fetch(apiUrl, {
+                method: 'POST',
+                mode: 'no-cors', // 'no-cors' is required for simple POST requests to Apps Script
+                cache: 'no-cache',
+                headers: { 'Content-Type': 'application/json' },
+                redirect: 'follow', // Important for Apps Script redirects
+                body: JSON.stringify(formData)
+            })
+            .then(() => {
+                statusEl.textContent = 'Success! Your report is on its way.';
+                statusEl.style.color = '#22c55e'; // green
+                form.reset();
+            })
+            .catch(error => {
+                console.error("Submission error:", error);
+                statusEl.textContent = 'Error: Could not send data.';
+                statusEl.style.color = '#ef4444'; // red
+            })
+            .finally(() => {
+                setTimeout(() => { submitButton.disabled = false; }, 3000);
+            });
+        });
+
+        // Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+        document.querySelectorAll('.stat-card, .fade-in-up, .grid > div[class*="delay"]').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+</body>
+</html>
