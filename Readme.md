@@ -2,33 +2,16 @@ TRACE Landing Page Project
 1. Project Overview
 This project is a high-converting, responsive landing page for TRACE, a company providing AI-powered drone assessments for the insurance and contracting industries. The page is architected for lead generation, leveraging modern design, compelling copy, and seamless third-party integrations to capture user interest and data.
 
-2. Key Features
-Dynamic Hero Section: Features an autoplaying video background to immediately capture user attention.
-
-Neuromarketing-Optimized Copy: All text, from headlines to button CTAs, has been crafted to be persuasive, benefit-driven, and to create a sense of urgency and trust.
-
-Social Proof: Includes sections for client logos and testimonials to build credibility and authority.
-
-Data-Driven Statistics: Key metrics are highlighted in visually engaging "stat cards" to quantify the problems TRACE solves.
-
-Exit-Intent Modal: A pop-up appears when a user is about to leave the page, providing a final opportunity to engage them with a compelling offer.
-
-Integrated AI Chatbot: A Chatbase chatbot ("Nova, the TRACE Concierge") is embedded directly on the page for instant user support and lead qualification.
-
-Zoho Form Integration: The primary lead capture mechanism is a seamless iFrame integration with a Zoho form, ensuring all lead data is sent directly to your CRM.
-
-Fully Responsive Design: The layout is optimized for a flawless viewing experience across all devices, from mobile phones to desktops.
-
-3. Technology Stack
+2. Technology Stack
 The project is built with a simple and robust front-end stack.
 
 HTML5: For the core structure and content of the page.
 
 Tailwind CSS: For all styling, enabling a modern and responsive utility-first design.
 
-JavaScript (Vanilla): For interactive elements like the exit-intent modal, smooth scrolling, and scroll-based animations.
+JavaScript (Vanilla): For interactive elements like the exit-intent modal and smooth scrolling.
 
-4. Third-Party Integrations
+3. Third-Party Integrations
 a. Zoho Forms
 Purpose: To capture lead information for AI assessment reports.
 
@@ -53,17 +36,35 @@ A JavaScript snippet at the end of the <body> tag that loads the Chatbase widget
 
 To Update the Chatbot: No changes are needed in the HTML. All chatbot configuration, training, and appearance settings are managed directly from your Chatbase.co dashboard.
 
-5. Deployment
-Since this is a static website with no backend dependencies, deployment is very simple. You can host it on any static web hosting provider like Vercel, Netlify, or GitHub Pages.
+4. Vercel Deployment Guide
+This project is a static site and is easy to deploy on Vercel.
 
-Push to GitHub: Ensure your project is pushed to a GitHub repository.
+Step 1: Prepare Your Files
+Ensure your project folder contains the following three files:
 
-Import Project on Hosting Provider:
+index.html (The main landing page file)
 
-Log in to your Vercel (or other) account.
+vercel.json (The Vercel configuration file)
 
-Import the project from your GitHub repository.
+README.md (This file)
 
-The build settings can usually be left as the default for a static site.
+Step 2: Deploy to Vercel
+Push to GitHub: Upload your project folder to a new GitHub repository.
 
-Deploy: Trigger the deployment. Your site will be live.
+Import Project on Vercel:
+
+Log in to your Vercel account.
+
+Click "Add New..." -> "Project".
+
+Select and import your GitHub repository.
+
+Configure Project:
+
+Vercel will automatically detect the static nature of the site. The default settings should be correct.
+
+There are no environment variables to add.
+
+Deploy: Click the "Deploy" button.
+
+Vercel will now build and deploy your site. Your landing page will be live in minutes.
